@@ -1,0 +1,11 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <p>Bienvenue {{name}}</p>
+  {% for index,hero in heros %}
+  <p>Wesh {{hero}} <a href="/test/{{index}}">Fuite</a></p>
+    
+  {% endfor %}
+ 
+{% endblock %}
