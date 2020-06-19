@@ -9,10 +9,7 @@ const heros=[
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
-    title: 'Gloire',
-    name: 'Aventurier' 
-  });
+  res.redirect('/test');
 });
 
 /* GET test page. */
@@ -30,5 +27,14 @@ router.get('/test/:nb?', function(req, res, next) {
     heros: heros
   });
 });
+
+/*GET todo page.*/
+router.get('/todo',function(req,res,next){
+
+
+  res.render('todo',{
+    title: "TODO OPC",
+  })
+})
 
 module.exports = router;
